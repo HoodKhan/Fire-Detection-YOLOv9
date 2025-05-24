@@ -61,9 +61,9 @@ pip install -r requirements.txt
 ## Usage
 
 ### Training the Model
-
+```
 You can train the YOLOv9 model on your custom fire dataset using the following Python code snippet or command line:
-
+```
 ```python
 from ultralytics import YOLO
 
@@ -74,17 +74,17 @@ model = YOLO("yolov9t.pt")
 results = model.train(data="./data.yaml", epochs=100, imgsz=640, device=[0,1])
 ```
 
-
+```
 Or from the command line (assuming you have a training script):
-
+```
 ```bash
 python src/train.py --data ./data.yaml --epochs 100 --imgsz 640 --device 0 1
 ```
-
+```
 ─Ensure your data.yaml file is correctly set with dataset paths and classes.
 
 ─You can adjust training parameters like epochs, imgsz (image size), and device as needed.
-
+```
 
 
 ##Detect with Webcam
@@ -103,20 +103,20 @@ python src/detect_image.py --weights models/best.pt --source path/to/images
 
 #Running Fire Detection
 
-
+```
 On Images
 Run inference on individual images using the detection script:
-
+```
 ```bash
 python src/detect_image.py --source path/to/image.jpg --weights models/best.pt --conf 0.5
 ```
 
 
 
-
+```
 On Webcam (Real-time Detection)
 To run detection on webcam feed:
-
+```
 
 ```bash
 python src/detect_webcam.py --weights models/best.pt --conf 0.5
@@ -127,7 +127,7 @@ python src/detect_webcam.py --weights models/best.pt --conf 0.5
 
 #Notes
 
-
+```
 Replace "yolov9t.pt" with your chosen pretrained model or custom trained weights (best.pt).
 
 The data.yaml file should point to your dataset paths and class names.
@@ -135,34 +135,34 @@ The data.yaml file should point to your dataset paths and class names.
 Adjust confidence threshold (--conf) as needed.
 
 For Raspberry Pi deployment, use YOLO v9- tiny weights and the tiny model for better performance.
-
+```
 
 
 
 #Dataset
-
+```
 The dataset is annotated using Roboflow in YOLO format with images and labels structured appropriately.
-
+```
 
 
 
 
 #Results
-
+```
 Check the results/ folder for evaluation metrics like confusion matrix, precision-recall curves, and sample prediction images.
-
+```
 
 
 
 #License
-
+```
 This project uses the MIT License.
-
+```
 
 
 
 #Contact
-
+```
 For questions or contributions, please open an issue or contact hoodilyas1@gmail.com.
-
+```
 
