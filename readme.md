@@ -11,7 +11,7 @@ This project implements a fire detection system using the YOLOv9 object detectio
 
 
 ##Repository Structure
-
+```text
 Fire-Detection-YOLOv9/
 │
 ├── Dataset # Annotated Dataset
@@ -33,23 +33,23 @@ Fire-Detection-YOLOv9/
 
 
 ##Prerequisites
-
+```bash
 - Python 3.8+
 - Pip package manager
-
+```
 ##Installation
 
 Clone the repository:
 
-
+```bash
 git clone <your-repo-url>
 cd Fire-Detection-YOLOv9
-
+```
 Install Dependencies:
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 
 
@@ -72,14 +72,14 @@ model = YOLO("yolov9t.pt")
 
 # Train on your dataset with specified parameters
 results = model.train(data="./data.yaml", epochs=100, imgsz=640, device=[0,1])
-
+```
 
 
 Or from the command line (assuming you have a training script):
 
-
+```bash
 python src/train.py --data ./data.yaml --epochs 100 --imgsz 640 --device 0 1
-
+```
 
 ─Ensure your data.yaml file is correctly set with dataset paths and classes.
 
@@ -89,15 +89,15 @@ python src/train.py --data ./data.yaml --epochs 100 --imgsz 640 --device 0 1
 
 ##Detect with Webcam
 
-
+```bash
 python src/detect_webcam.py --weights models/best.pt
-
+```
 
 ##Detect with Images
 
-
+```bash
 python src/detect_image.py --weights models/best.pt --source path/to/images
-
+```
 
 
 
@@ -109,7 +109,7 @@ Run inference on individual images using the detection script:
 
 ```bash
 python src/detect_image.py --source path/to/image.jpg --weights models/best.pt --conf 0.5
-
+```
 
 
 
@@ -118,9 +118,9 @@ On Webcam (Real-time Detection)
 To run detection on webcam feed:
 
 
-
+```bash
 python src/detect_webcam.py --weights models/best.pt --conf 0.5
-
+```
 
 
 
