@@ -1,3 +1,4 @@
+
 #Fire Detection using YOLOv9
 
 
@@ -40,13 +41,13 @@ Fire-Detection-YOLOv9/
 
 Clone the repository:
 
-```bash
+
 git clone <your-repo-url>
 cd Fire-Detection-YOLOv9
 
 Install Dependencies:
 
-```bash
+
 pip install -r requirements.txt
 
 
@@ -76,7 +77,7 @@ results = model.train(data="./data.yaml", epochs=100, imgsz=640, device=[0,1])
 
 Or from the command line (assuming you have a training script):
 
-```bash
+
 python src/train.py --data ./data.yaml --epochs 100 --imgsz 640 --device 0 1
 
 
@@ -88,13 +89,13 @@ python src/train.py --data ./data.yaml --epochs 100 --imgsz 640 --device 0 1
 
 ##Detect with Webcam
 
-```bash
+
 python src/detect_webcam.py --weights models/best.pt
 
 
 ##Detect with Images
 
-```bash
+
 python src/detect_image.py --weights models/best.pt --source path/to/images
 
 
@@ -117,7 +118,7 @@ On Webcam (Real-time Detection)
 To run detection on webcam feed:
 
 
-```bash
+
 python src/detect_webcam.py --weights models/best.pt --conf 0.5
 
 
