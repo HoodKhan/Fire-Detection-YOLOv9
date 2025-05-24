@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Fire', 'Smoke']
+
+roboflow:
+  workspace: firedetection-lcw7a
+  project: fire-detection-sd2lx
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/firedetection-lcw7a/fire-detection-sd2lx/dataset/1
