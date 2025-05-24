@@ -22,7 +22,7 @@ Fire-Detection-YOLOv9/
 ├── README.md # Usage
 ├── .gitignore # Files to be ignored by git
 └── LICENSE # Project license
-
+```
 
 
 
